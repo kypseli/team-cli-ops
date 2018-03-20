@@ -1,0 +1,32 @@
+{
+    "data": {
+        "displayName": "API Team",
+        "icon": {
+            "color": "#71a9da",
+            "name": "code"
+        },
+        "members": [
+            {
+                "id": "kypseli*admin",
+                "roles": [
+                    "TEAM_ADMIN"
+                ]
+            },
+            {
+                "id": "kypseli*api",
+                "roles": [
+                    "TEAM_MEMBER"
+                ]
+            },
+            {
+                "id": "kypseli*guest",
+                "roles": [
+                    "TEAM_GUEST"
+                ]
+            }
+        ],
+        "provisioningRecipe": "api",
+        "name": "api"
+    },
+    "version": "1"
+}
