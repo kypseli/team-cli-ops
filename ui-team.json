@@ -1,0 +1,32 @@
+{
+    "data": {
+        "displayName": "UI Team",
+        "icon": {
+            "color": "#7aad3f",
+            "name": "bowler hat"
+        },
+        "members": [
+            {
+                "id": "kypseli*admin",
+                "roles": [
+                    "TEAM_ADMIN"
+                ]
+            },
+            {
+                "id": "kypseli*ui",
+                "roles": [
+                    "TEAM_MEMBER"
+                ]
+            },
+            {
+                "id": "kypseli*guest",
+                "roles": [
+                    "TEAM_GUEST"
+                ]
+            }
+        ],
+        "provisioningRecipe": "basic",
+        "name": "ui"
+    },
+    "version": "1"
+}
