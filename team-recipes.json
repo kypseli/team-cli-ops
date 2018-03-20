@@ -1,0 +1,52 @@
+{
+    "version": "1",
+    "data": [
+        {
+            "name": "basic",
+            "displayName": "Basic",
+            "description": "The minimalistic setup.",
+            "plugins": [
+                "bluesteel-master",
+                "cloudbees-folders-plus",
+                "cloudbees-jsync-archiver",
+                "cloudbees-monitoring",
+                "cloudbees-nodes-plus",
+                "cloudbees-ssh-slaves",
+                "cloudbees-support",
+                "cloudbees-workflow-template",
+                "credentials-binding",
+                "email-ext",
+                "git",
+                "git-client",
+                "github-branch-source",
+                "github-organization-folder",
+                "infradna-backup",
+                "mailer",
+                "operations-center-analytics-reporter",
+                "operations-center-cloud",
+                "pipeline-model-definition",
+                "ssh-credentials"
+            ],
+            "default": true
+        },
+        {
+            "name": "api",
+            "displayName": "API Development",
+            "description": "The essential tools to build, release and deploy micro-service APIS including integration with Maven and Gradle.",
+            "plugins": [
+                "bluesteel-master",
+                "cloudbees-jsync-archiver",
+                "config-file-provider",
+                "cloudbees-aws-cli",
+                "findbugs",
+                "gradle",
+                "jira",
+                "junit",
+                "pipeline-maven",
+                "tasks",
+                "warnings"
+            ],
+            "default": false
+        }
+    ]
+}
