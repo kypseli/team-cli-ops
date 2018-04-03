@@ -6,7 +6,7 @@ node('master') {
         sh """
           alias cli='java -jar jenkins-cli.jar -s \'http://cjoc/cjoc/\' -auth beedemo-admin:$API_KEY'
           echo 'creating team recipes'
-          cli team-creation-recipes --put < all-recipes.json
+          cli team-creation-recipes --put < team-recipes.json
           echo 'creating api team'
           cli teams api --put < api-team.json
         """
