@@ -1,4 +1,5 @@
 node('master') {
+    checkout scm
     echo "preparing Jenkins CLI"
     sh 'curl -O http://cjoc/cjoc/jnlpJars/jenkins-cli.jar'
     withCredentials([string(credentialsId: 'beedemo-admin-jenkins-api-key', variable: 'API_KEY')]) {
