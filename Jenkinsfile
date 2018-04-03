@@ -12,10 +12,15 @@ node('master') {
         """
         
         waitUntil {
-          sh """
-            alias cli='java -jar jenkins-cli.jar -s \'http://cjoc/cjoc/\' -auth beedemo-admin:$API_KEY'
-            cli teams api | grep 'success'
-          """
+          try {
+            sh """
+              alias cli='java -jar jenkins-cli.jar -s \'http://cjoc/cjoc/\' -auth beedemo-admin:$API_KEY'
+              cli teams api | grep 'success'
+            """
+            return true
+          } catch (exception) {
+            return false  
+          }
         }
         echo 'successfully created api team'
     }
