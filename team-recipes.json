@@ -19,13 +19,16 @@
                 "git",
                 "git-client",
                 "github-branch-source",
-                "github-organization-folder",
                 "infradna-backup",
                 "mailer",
                 "operations-center-analytics-reporter",
                 "operations-center-cloud",
                 "pipeline-model-definition",
-                "ssh-credentials"
+                "pipeline-utility-steps",
+                "notification-api",
+                "pipeline-event-step",
+                "operations-center-notification"
+                
             ],
             "default": true
         },
@@ -35,16 +38,25 @@
             "description": "The essential tools to build, release and deploy micro-service APIS including integration with Maven and Gradle.",
             "plugins": [
                 "bluesteel-master",
+                "cloudbees-folders-plus",
                 "cloudbees-jsync-archiver",
                 "config-file-provider",
                 "cloudbees-aws-cli",
+                "cloudbees-support",
+                "cloudbees-workflow-template",
                 "findbugs",
                 "gradle",
+                "github-branch-source",
+                "infradna-backup",
                 "jira",
                 "junit",
                 "pipeline-maven",
                 "tasks",
-                "warnings"
+                "warnings",
+                "pipeline-utility-steps",
+                "notification-api",
+                "pipeline-event-step",
+                "operations-center-notification"
             ],
             "default": false
         }
