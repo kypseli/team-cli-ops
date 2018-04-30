@@ -1,6 +1,7 @@
 node('master') {
     properties([parameters([string(defaultValue: '', description: 'Name of team to create with associated named json file.', name: 'teamName', trim: false)])])
     if(params.teamName) {
+        echo "preparing to create ${params.teamName} team"
         checkout scm
         echo "preparing Jenkins CLI"
         sh 'curl -O http://cjoc/cjoc/jnlpJars/jenkins-cli.jar'
@@ -14,7 +15,7 @@ node('master') {
                 """
                 createTeam = false
             } catch (exception) {
-                createTeam = false  
+                createTeam = true  
             }
             if(createTeam) {
                 //recipes are updated every run
@@ -48,6 +49,9 @@ node('master') {
                   cli team-members ${params.teamName} --add kypseli*ops --roles TEAM_OPS
                 """
                 echo "finished setting up ops role for ${params.teamName} team"
+            }
+            else {
+                echo "${params.teamName} team was already created"
             }
         }
     }
